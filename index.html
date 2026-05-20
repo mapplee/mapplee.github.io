@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Md. Apple Mahmud — Senior Software Engineer specializing in backend systems, telecom-grade software, Android development, and real-time communication." />
+<title>Md. Apple Mahmud — Senior Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0b0d12;
+    --bg-elevated: #12151c;
+    --bg-card: #161a23;
+    --border: #232936;
+    --text-primary: #e7eaf0;
+    --text-secondary: #9aa3b2;
+    --text-muted: #6b7280;
+    --accent: #4f8cff;
+    --accent-soft: rgba(79, 140, 255, 0.12);
+    --play-green: #34a853;
+    --play-blue: #4285f4;
+    --play-yellow: #fbbc04;
+    --play-red: #ea4335;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  /* HEADER */
+  header {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+  .role {
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .summary {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 720px;
+    margin-top: 12px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .contact a {
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .contact a:hover { color: var(--accent); }
+
+  /* SECTIONS */
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  /* PLAY CONSOLE BLOCK */
+  .play-block {
+    background: linear-gradient(135deg, rgba(52, 168, 83, 0.08), rgba(66, 133, 244, 0.08));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  .play-logo {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+  .play-block h3 { margin-bottom: 8px; font-size: 21px; }
+  .play-block p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .play-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .play-tags span {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .skill-card-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .skill-card ul { list-style: none; }
+  .skill-card li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 3px 0;
+  }
+  .skill-card li::before {
+    content: '›';
+    color: var(--text-muted);
+    margin-right: 8px;
+  }
+
+  /* EXPERIENCE */
+  .job {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .job-meta { font-size: 13px; color: var(--text-muted); }
+  .job-company {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .job ul { list-style: none; margin-top: 12px; }
+  .job li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 5px 0;
+    padding-left: 18px;
+    position: relative;
+  }
+  .job li::before {
+    content: '▪';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+
+  /* PROJECTS */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  .project {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .project:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .project h3 { font-size: 16px; margin-bottom: 6px; }
+  .project-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 8px 0 12px;
+  }
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .project-stack span {
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ACHIEVEMENTS */
+  .achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .achievement {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  .achievement-rank { color: var(--accent); font-weight: 600; }
+  .achievement-name { color: var(--text-secondary); }
+  .achievement-year { color: var(--text-muted); font-size: 12px; }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 0 48px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 32px; }
+    .play-block { grid-template-columns: 1fr; text-align: center; }
+    .play-logo { margin: 0 auto; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-grid">
+      <h1>Md. Apple Mahmud</h1>
+      <div class="role">Senior Software Engineer · Backend &amp; Telecom Systems</div>
+      <p class="summary">
+        3.5+ years building high-performance backend systems, real-time communication platforms, and
+        telecom-grade software. I work across Node.js, NestJS, PostgreSQL, Kafka, Redis, Docker,
+        and Android (Java/WebRTC). Currently building scalable platforms at Telcobright Ltd., Dhaka.
+      </p>
+      <div class="contact">
+        <a href="mailto:iapplee007@gmail.com">iapplee007@gmail.com</a>
+        <a href="https://github.com/mapplee" target="_blank" rel="noopener">github.com/mapplee</a>
+        <a href="https://linkedin.com/in/00iapplee" target="_blank" rel="noopener">linkedin.com/in/00iapplee</a>
+        <span>Dhaka, Bangladesh</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="android">
+  <div class="container">
+    <h2>Android &amp; Google Play</h2>
+    <div class="play-block">
+      <svg class="play-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Google Play">
+        <defs>
+          <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00d4ff"/>
+            <stop offset="100%" stop-color="#0066ff"/>
+          </linearGradient>
+          <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff3333"/>
+            <stop offset="100%" stop-color="#cc0000"/>
+          </linearGradient>
+          <linearGradient id="pg3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffd633"/>
+            <stop offset="100%" stop-color="#ff9900"/>
+          </linearGradient>
+          <linearGradient id="pg4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00cc66"/>
+            <stop offset="100%" stop-color="#009933"/>
+          </linearGradient>
+        </defs>
+        <path d="M67 38 L312 256 L67 474 C58 470 52 461 52 450 V62 C52 51 58 42 67 38 Z" fill="url(#pg1)"/>
+        <path d="M67 38 C70 37 74 36 78 38 L355 198 L312 256 Z" fill="url(#pg4)"/>
+        <path d="M312 256 L355 198 L443 248 C455 255 455 257 443 264 L355 314 Z" fill="url(#pg3)"/>
+        <path d="M312 256 L355 314 L78 474 C74 476 70 475 67 474 Z" fill="url(#pg2)"/>
+      </svg>
+      <div>
+        <h3>Android Development &amp; Real-Time Communication</h3>
+        <p>
+          Android application development with Java &mdash; implemented WebRTC-based audio/video
+          calling, signaling servers, push notifications, and authentication systems. Hands-on
+          experience integrating XMPP, WebSocket, Firebase, and REST APIs for client-server
+          communication on mobile.
+        </p>
+        <p>
+          Currently building SaaS and communication-platform projects; planning to publish and
+          manage Android applications and services via Google Play Console.
+        </p>
+        <div class="play-tags">
+          <span>Java</span>
+          <span>WebRTC</span>
+          <span>XMPP</span>
+          <span>WebSocket</span>
+          <span>Firebase</span>
+          <span>REST APIs</span>
+          <span>Push Notifications</span>
+          <span>Signaling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-label">Backend</div>
+        <ul>
+          <li>Node.js, Express.js, NestJS</li>
+          <li>REST APIs, GraphQL</li>
+          <li>Microservices, Event-Driven, CQRS</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Database</div>
+        <ul>
+          <li>PostgreSQL (query tuning, indexing)</li>
+          <li>MongoDB</li>
+          <li>Redis (caching, Pub/Sub)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Message Broker</div>
+        <ul>
+          <li>Apache Kafka</li>
+          <li>RabbitMQ</li>
+          <li>BullMQ</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Mobile / Real-Time</div>
+        <ul>
+          <li>Android (Java)</li>
+          <li>WebRTC, signaling servers</li>
+          <li>XMPP, WebSocket</li>
+          <li>Firebase, push notifications</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Auth &amp; Security</div>
+        <ul>
+          <li>JWT, OAuth 2.0, Auth0</li>
+          <li>RBAC, CORS</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">DevOps</div>
+        <ul>
+          <li>Docker, Docker Compose</li>
+          <li>CI/CD, GitHub Actions</li>
+          <li>Nginx, Linux (Ubuntu)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Frontend</div>
+        <ul>
+          <li>React, TypeScript</li>
+          <li>Tailwind, Bootstrap</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Languages</div>
+        <ul>
+          <li>JavaScript / TypeScript</li>
+          <li>Java, C, Python</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Monitoring &amp; Tools</div>
+        <ul>
+          <li>ELK Stack, PM2, Winston</li>
+          <li>TypeORM, Prisma, Swagger</li>
+          <li>Git, GitHub, Postman</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <h3>Senior Software Engineer</h3>
+          <div class="job-company">Telcobright Ltd., Dhaka</div>
+        </div>
+        <div class="job-meta">July 2022 &mdash; Present</div>
+      </div>
+      <ul>
+        <li>Architected and developed a Call Data Analysis System (CAS) used by BTRC and ICX operators for billing and regulatory compliance, processing millions of CDR records.</li>
+        <li>Built a high-performance binary data decoder transforming raw telecom CDR data into structured, queryable formats using Node.js and PostgreSQL.</li>
+        <li>Developed RESTful APIs for data retrieval, reporting, and third-party integrations with JWT-based authentication.</li>
+        <li>Worked on Vector Packet Processing (VPP) &mdash; implemented data collection pipelines in C and integrated with backend analytics.</li>
+        <li>Implemented WebRTC-based audio/video calling on Android (Java), handling real-time communication protocols and signaling servers.</li>
+        <li>Modernized RestComm JSS7 (SS7 stack &mdash; M3UA, SCCP, TCAP, MAP, ISUP) from UI-dependent to headless/CLI operation with JSON configuration.</li>
+        <li>Implemented Redis for caching and session management; reduced database load and improved API response times.</li>
+        <li>Utilized Apache Kafka for event streaming and asynchronous processing of high-volume telecom pipelines.</li>
+        <li>Containerized applications with Docker and set up CI/CD pipelines with GitHub Actions.</li>
+        <li>Optimized PostgreSQL queries using EXPLAIN ANALYZE, indexing strategies, and schema redesign for large-scale telecom datasets.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Selected Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Call Data Analysis System (CAS)</h3>
+        <p class="project-desc">Telecom-grade CDR processing platform used by BTRC and ICX operators. Decodes binary CDR data, generates billing reports, and serves regulatory queries.</p>
+        <div class="project-stack">
+          <span>Node.js</span><span>PostgreSQL</span><span>Kafka</span><span>Redis</span>
+        </div>
+      </div>
+      <div class="project">
+        <h3>WebRTC Audio/Video Calling — Android</h3>
+        <p class="project-desc">Real-time audio/video calling implemented on Android with Java. Custom signaling layer, media negotiation, and call lifecycle handling.</p>
+        <div class="project-stack">
+          <span>Android</span><span>Java</span><span>WebRTC</span><span>WebSocket</span>
+        </div>
+      </div>
+      <div class="project">
+        <h3>RestComm JSS7 Modernization</h3>
+        <p class="project-desc">Converted the SS7 messaging stack (M3UA, SCCP, TCAP, MAP, ISUP) from UI-dependent to headless/CLI operation with JSON-based configuration.</p>
+        <div class="project-stack">
+          <span>Java</span><span>SS7</span><span>CLI</span>
+        </div>
+      </div>
+      <div class="project">
+        <h3>Health Service Platform</h3>
+        <p class="project-desc">Full-stack health service application with emergency doctor appointment booking, JWT authentication, and TypeORM-based data layer.</p>
+        <div class="project-stack">
+          <span>Node.js</span><span>Express</span><span>TypeORM</span><span>React</span>
+        </div>
+      </div>
+      <div class="project">
+        <h3>Online Judge Platform</h3>
+        <p class="project-desc">Competitive programming platform with automated code evaluation against test cases. Containerized with Docker; PostgreSQL for problem/submission storage.</p>
+        <div class="project-stack">
+          <span>Django</span><span>PostgreSQL</span><span>Docker</span>
+        </div>
+      </div>
+      <div class="project">
+        <h3>Dhikr — Chrome Extension</h3>
+        <p class="project-desc">Chrome extension displaying Hadith and vocabulary on every new tab. Contributed API integration and bug fixes.</p>
+        <div class="project-stack">
+          <span>React</span><span>JavaScript</span><span>Tailwind</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="container">
+    <h2>Competitive Programming &amp; Achievements</h2>
+    <div class="achievements">
+      <div class="achievement">
+        <span><span class="achievement-rank">87th</span> <span class="achievement-name">ICPC Dhaka Regional</span></span>
+        <span class="achievement-year">2020</span>
+      </div>
+      <div class="achievement">
+        <span><span class="achievement-rank">99th</span> <span class="achievement-name">SEU ICPC Dhaka Regional</span></span>
+        <span class="achievement-year">2019</span>
+      </div>
+      <div class="achievement">
+        <span><span class="achievement-rank">76th</span> <span class="achievement-name">BUP IUPC</span></span>
+        <span class="achievement-year">2019</span>
+      </div>
+      <div class="achievement">
+        <span><span class="achievement-rank">Champion</span> <span class="achievement-name">Programming Combat (Tejgaon)</span></span>
+        <span class="achievement-year">2021</span>
+      </div>
+      <div class="achievement">
+        <span><span class="achievement-rank">8th</span> <span class="achievement-name">DIU ICT Carnival</span></span>
+        <span class="achievement-year">2018</span>
+      </div>
+      <div class="achievement">
+        <span><span class="achievement-rank">248th</span> <span class="achievement-name">DIU ICPC Dhaka Regional</span></span>
+        <span class="achievement-year">2018</span>
+      </div>
+    </div>
+    <p style="margin-top:18px; font-size:14px; color: var(--text-secondary);">
+      Vice President, DIIT Programming Club (2019&ndash;2022) &mdash; organized programming contests and mentored junior students.
+      Active on Codeforces (<em>applee</em>), HackerRank (<em>iapplee</em>), CodeChef (<em>applee</em>), and UVa (<em>Applee</em>).
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 2026 Md. Apple Mahmud · Built with HTML &amp; CSS · Hosted on GitHub Pages
+  </div>
+</footer>
+
+</body>
+</html>
