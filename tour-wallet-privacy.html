@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tour Wallet — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+      background: #ffffff;
+    }
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 28px; margin: 0 0 4px; color: #167d8f; }
+    h2 { font-size: 18px; margin-top: 28px; color: #0f172a; }
+    p, li { font-size: 15px; }
+    code, pre { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+    .meta { color: #64748b; font-size: 13px; }
+    a { color: #167d8f; }
+    table { border-collapse: collapse; margin: 8px 0; width: 100%; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; font-size: 14px; vertical-align: top; }
+    th { background: #f1f5f9; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Tour Wallet — Privacy Policy</h1>
+      <p class="meta">Last updated: 02 June 2026 &middot; Contact: <a href="mailto:iapplee007@gmail.com">iapplee007@gmail.com</a></p>
+    </header>
+
+    <p>
+      Tour Wallet (&ldquo;the app&rdquo;, &ldquo;we&rdquo;) is a mobile app that helps small groups
+      of friends track shared trip expenses in Bangladeshi Taka (BDT). This page explains what data
+      the app collects, how it is used, where it is stored, and the choices you have. By using the
+      app you agree to this policy.
+    </p>
+
+    <h2>1. Information we collect</h2>
+    <p>We collect only what the app needs to function. Specifically:</p>
+    <table>
+      <tr><th>Data</th><th>Why we collect it</th><th>Source</th></tr>
+      <tr><td>Email address</td><td>To create your account and let you sign in across devices.</td><td>You provide it (email/password sign-up or Google Sign-In).</td></tr>
+      <tr><td>Display name</td><td>So other members of your trip can recognise who paid or contributed.</td><td>You provide it.</td></tr>
+      <tr><td>Push notification token</td><td>To deliver in-app notifications (e.g. an expense was added). Optional &mdash; you can turn it off in Profile.</td><td>Issued by Expo / Firebase Cloud Messaging when you allow notifications.</td></tr>
+      <tr><td>Trip data (members, contributions, expenses, settlements, chat messages)</td><td>Core feature of the app &mdash; tracking who paid what on a shared trip.</td><td>You and the other members of your trip enter it.</td></tr>
+      <tr><td>Personal expenses (private)</td><td>So you can keep track of personal spending alongside group expenses.</td><td>You enter it. Visible only to you.</td></tr>
+    </table>
+
+    <p><strong>We do not collect:</strong> precise location, contacts, photos, microphone audio, advertising identifiers, browsing history, or any data about apps installed on your device.</p>
+
+    <h2>2. How we use the data</h2>
+    <ul>
+      <li>To run the app: store and sync your trips, contributions, and expenses across the devices of trip members.</li>
+      <li>To send push notifications about activity in your trips, if you have notifications turned on.</li>
+      <li>To compute who owes whom and suggest minimum-transfer settlements.</li>
+      <li>To detect crashes and fix bugs (aggregated, no personal content).</li>
+    </ul>
+    <p>We do not sell or rent your data. We do not show advertisements. We do not use your data to train any AI model.</p>
+
+    <h2>3. Where data is stored</h2>
+    <p>
+      Data is stored in <strong>Google Cloud Firestore</strong> (a Google Cloud product) as part of
+      the Firebase project <code>tour-app-2026</code>. Authentication is handled by
+      <strong>Firebase Authentication</strong>. Push notifications are relayed through
+      <strong>Expo Push Service</strong> and <strong>Firebase Cloud Messaging</strong>. These
+      services are operated by Google LLC and Expo / Software Mansion respectively, under their own
+      privacy policies:
+    </p>
+    <ul>
+      <li>Firebase &mdash; <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+      <li>Google Cloud &mdash; <a href="https://cloud.google.com/terms/cloud-privacy-notice">cloud.google.com/terms/cloud-privacy-notice</a></li>
+      <li>Expo &mdash; <a href="https://expo.dev/privacy">expo.dev/privacy</a></li>
+    </ul>
+    <p>Data is encrypted in transit (HTTPS / TLS) and at rest by the cloud provider.</p>
+
+    <h2>4. Who can see your data</h2>
+    <ul>
+      <li><strong>Trip data:</strong> visible only to the members of that specific trip. Firestore security rules enforce this on the server side.</li>
+      <li><strong>Personal expenses:</strong> visible only to you, even if tagged against a trip.</li>
+      <li><strong>Chat messages:</strong> visible only to the members of the trip the message belongs to.</li>
+      <li>We (the developer) do not browse your trip content. We may access aggregated logs only to debug a specific issue you have reported.</li>
+    </ul>
+
+    <h2>5. Data retention and deletion</h2>
+    <p>
+      You can delete your account and all associated data at any time by writing to
+      <a href="mailto:iapplee007@gmail.com">iapplee007@gmail.com</a> from the email address linked
+      to your account. Deletion includes your user profile, push tokens, personal expenses, and your
+      membership in trips. Trip documents owned by other admins are not deleted, but your
+      identifiers are removed from them.
+    </p>
+    <p>
+      You may also leave individual trips from the trip menu; doing so removes you from that trip
+      but does not delete your account.
+    </p>
+
+    <h2>6. Children</h2>
+    <p>
+      Tour Wallet is intended for general audiences and is suitable for ages 13 and above. We do not
+      knowingly collect data from children under 13. If you believe a child under 13 has created an
+      account, please contact us and we will delete the account.
+    </p>
+
+    <h2>7. Security</h2>
+    <p>
+      All network traffic between the app and our servers uses HTTPS. Authentication tokens are
+      stored in encrypted device storage. Server-side access is restricted by Firestore security
+      rules: a user can only read or write documents they are explicitly authorised for.
+    </p>
+
+    <h2>8. Permissions the app requests</h2>
+    <ul>
+      <li><strong>Internet</strong> &mdash; to sync your trip data and send notifications.</li>
+      <li><strong>Network state</strong> &mdash; to show an offline banner when you have no connection.</li>
+      <li><strong>Camera</strong> &mdash; only when you tap &ldquo;Scan QR&rdquo; to join a trip. Camera frames are processed on-device and never uploaded.</li>
+      <li><strong>Notifications</strong> &mdash; only if you grant the OS prompt. Used to tell you when a trip member added an expense, requested approval, etc.</li>
+    </ul>
+
+    <h2>9. Changes to this policy</h2>
+    <p>
+      If we change this policy materially we will update the &ldquo;Last updated&rdquo; date at the
+      top and, where reasonable, surface a notice in the app.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      Questions, deletion requests, or concerns: <a href="mailto:iapplee007@gmail.com">iapplee007@gmail.com</a>.
+    </p>
+  </main>
+</body>
+</html>
